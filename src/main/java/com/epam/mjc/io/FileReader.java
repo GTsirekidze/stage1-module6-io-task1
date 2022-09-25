@@ -26,10 +26,13 @@ public class FileReader {
                     case "Phone:":
                         profile.setPhone(Long.valueOf(splittedLine[1]));
                         break;
+                    default:
+                        System.err.println("Wrong key");
+
                 }
             }
         } catch (Exception e) {
-            System.out.println(e.getMessage());
+            System.err.println(e.getMessage());
             return null;
         }
 
